@@ -1,0 +1,502 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+
+    .slider-item {
+        position: relative;
+    }
+
+    .slider-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 88%;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.8;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .slider-item-wrap {
+        position: relative;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 900px;
+            height: 88%;
+            aspect-ratio: 1030/750;
+            background-color: $orange;
+            clip-path: polygon(20% 0%, 100% 0, 100% 100%, 7.5% 100%);
+        }
+    }
+
+    .slider-content {
+        max-width: 425px;
+        color: #fff;
+        padding: 147px 0 252px;
+
+        .sub-title {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.2em;
+            margin-bottom: 4px;
+        }
+
+        .title {
+            font-size: 68px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 28px;
+            margin-bottom: 30px;
+        }
+
+        .view-more {
+            margin-bottom: 30px;
+        }
+
+        .mobile-platform {
+            img {
+                margin-right: 30px;
+                max-width: 25px;
+            }
+        }
+    }
+
+    .slider-item-banner {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: max-content;
+        max-width: 870px;
+        height: 100%;
+        text-align: right;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .swiper-button-next {
+        right: 60px;
+    }
+
+    .swiper-button-prev {
+        left: 60px;
+    }
+}
+
+.about-home {
+    position: relative;
+    overflow: hidden;
+    margin: -90px 0 124px;
+
+    &.animation-text {
+        .about-unimob {
+            right: 100%;
+            transform: translateX(calc(-100% - 200px));
+        }
+
+        .about-game { 
+            right: 100%;
+            transform: translateX(calc(-100% - 200px));
+        }
+    }
+
+    .about-home-wrap {
+        position: relative;
+        padding: 278px 0 0;
+    }
+
+    .about-unimob {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: max-content;
+        transform: translate(0, -25%);
+        transition: all 0.5s ease;
+    }
+
+    .about-game {
+        position: absolute;
+        top: 190px;
+        left: 0;
+        width: max-content;
+        transition: all  0.5s ease;
+    }
+
+    .block-heading {
+        position: absolute;
+        width: 52.15%;
+        padding: 7px 43px 57px;
+        box-shadow: 7px 11px 10px 0 rgba(#000, 0.05);
+        transform: translate(-43px, -65px);
+        background-color: #fff;
+
+        .title {
+            max-width: 70%;
+        }
+
+        p {
+            margin-bottom: 23px;
+        }
+    }
+
+    .about-home-banner {
+        text-align: right;
+
+        img {
+            width: 100%;
+            max-width: 653px;
+        }
+    }
+}
+
+.best-products {
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 129px;
+
+    .clipath-red {
+        position: absolute;
+        width: 54.75%;
+        height: 66px;
+        left: 4%;
+        top: 0;
+        background-color: $darkred;
+        clip-path: polygon(0 0, 4% 100%, 100% 0);
+        -webkit-clip-path: polygon(0 0, 4% 100%, 100% 0);
+    }
+
+    .clipath-orange {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 42%;
+        height: 24px;
+        background-color: $orange;
+        clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+        -webkit-clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+    }
+
+    .block-heading {
+        max-width: 927px;
+    }
+
+    .list-product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 69px 60px;
+        margin-bottom: 50px;
+    }
+}
+
+.join-unimob {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 30.5%;
+        bottom: 0;
+        background-color: $darkred;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 50%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 50%); 
+    }
+
+    .join-unimob-wrap {
+        position: relative;
+        background: url('../images/join-unimob-back.png') no-repeat;
+        background-position: center center;
+        padding: 327px 0 265px;
+        clip-path: polygon(0% 24%, 100% 0%, 100% 76%, 0% 100%);
+        -webkit-clip-path: polygon(0% 24%, 100% 0%, 100% 76%, 0% 100%); 
+        z-index: 2;
+    }
+
+    .block-heading {
+        .sub-title {
+            color: #fff;
+        }
+
+        .title {
+            color: #fff;
+            margin-bottom: 27px;
+        }
+
+        .btn-main {
+            background-color: #fff;
+            color: $orange;
+
+            &:hover {
+                background-color: $darkred;
+                color: #fff;
+
+                svg path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+
+.home-blogs {
+    margin-bottom: 117px;
+}
+
+.download-apps {
+    background: url('../images/download-app-back.png') no-repeat #F9F9F9;
+    background-size: cover;
+    background-position: center center;
+    padding: 109px 0 195px;
+    overflow: hidden;
+
+    .download-apps-wrap {
+        position: relative;
+    }
+
+    .block-heading {
+        width: 52%;
+        max-width: 603px;
+        margin: 0;
+
+        .title {
+            margin-bottom: 20px;
+        }
+    }
+
+    .app-item {
+        margin-right: 30px;
+        display: inline-block;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .download-apps-banner {
+        position: absolute;
+        right: 0;
+        top: -14%;
+        width: 51%;
+        max-width: 584px;
+        transform: translate(30%, 0);
+        animation: upDown 3s linear infinite alternate-reverse;
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translate(30%, -30px);
+    }
+
+    100% {
+        transform: translate(30%, 40px);
+    }
+}
+
+@include min-desktop {
+    .download-apps {
+        .block-heading {
+            .title {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@include large-desktop {
+    .slider {
+        .slider-image {
+            height: 100%;
+        }
+
+        .slider-content {
+            padding: 90px 0;
+        }
+
+        .slider-item-wrap {
+            &:before {
+                height: 100%;
+                min-width: initial;
+                aspect-ratio: 920 / 750;
+            }
+        }
+
+        .slider-item-banner {
+            max-width: 650px;
+        }
+
+        .swiper-button-next {
+            right: 30px;
+        }
+    
+        .swiper-button-prev {
+            left: 30px;
+        }
+    }
+
+    .about-home {
+        margin: 0  0 124px;
+
+        .about-home-wrap {
+            padding: 160px 0 0;
+        }
+    }
+}
+
+@include desktop {
+    .slider {
+        .slider-item-wrap {
+            &:before {
+                display: none;
+            }
+        }
+
+        .slider-item-banner {
+            display: none;
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            display: none;
+        }
+    }
+}
+
+@include tablet {
+    .about-home {
+        .about-home-wrap {
+            padding: 80px 0 0;
+        }
+
+        .block-heading {
+            position: relative;
+            width: 100%;
+            transform: none;
+
+            .title {
+                max-width: 100%;
+            }
+        }
+
+        .about-home-banner {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .about-unimob, .about-game {
+            display: none;
+        }
+    }
+
+    .best-products {
+        margin-bottom: 60px;
+
+        .list-product {
+            gap: 60px 30px;
+        }
+    }
+
+    .join-unimob {
+        .join-unimob-wrap {
+            padding: 80px 0 60px;
+            clip-path: none;
+            -webkit-clip-path: none;
+        }
+    }
+
+    .download-apps {
+        .block-heading {
+            width: 100%;
+            text-align: center;
+        }
+
+        .download-apps-banner {
+            display: none;
+        }
+    }
+}
+
+@include extra-mobile {
+    .slider {
+        .slider-content {
+            .sub-title {
+                font-size: 12px;
+            }
+
+            .title {
+                font-size: 32px;
+            }
+
+            p {
+                line-height: 1.5em;
+            }
+        }
+    }
+
+    .about-home {
+        margin-bottom: 60px;
+
+        .block-heading {
+            padding: 0;
+            box-shadow: none;
+        }
+    }
+
+    .best-products {
+        padding-top: 50px;
+
+        .clipath-red {
+            height: 30px;
+        }
+
+        .clipath-orange {
+            height: 14px;
+        }
+
+        .list-product {
+            gap: 60px 20px;
+            margin-bottom: 20px;
+        }
+
+        .view-more {
+            text-align: center;
+        }
+    }
+
+    .home-blogs {
+        margin-bottom: 60px;
+    }
+}
+
+@include small-mobile {
+    .best-products {
+        .list-product {
+            grid-template-columns: 1fr
+        }
+    } 
+}

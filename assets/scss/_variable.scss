@@ -1,0 +1,80 @@
+//**Font face**//
+@font-face {
+  font-family: "Inter";
+  src: url('../fonts/Inter-VariableFont_slnt\,wght.ttf') format("truetype");
+}
+
+  /**Variable font**/
+  $font-inter: "Inter", sans-serif ;
+
+  //**Variable color**//
+  $orange: #F36523;
+  $darkred: #BF1E2E;
+
+  /**Media Queries**/
+  @mixin min-large-desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  
+  @mixin min-desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @mixin min-small-desktop {
+    @media (min-width:1024px) {
+      @content;
+    }
+  }
+  
+  
+  @mixin large-desktop {
+    @media only screen and (max-width: 1399.98px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media only screen and (max-width: 1199.98px) {
+      @content;
+    }
+  }
+  
+  @mixin small-desktop {
+    @media only screen and (max-width: 1023.98px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media only screen and (max-width: 991.98px) {
+      @content;
+    }
+  }
+  
+  @mixin landscape-phone {
+    @media only screen and (max-width: 767.98px) {
+      @content;
+    }
+  }
+  
+  @mixin extra-mobile {
+    @media only screen and (max-width: 576.98px) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media only screen and (max-width: 480.98px) {
+      @content;
+    }
+  }
+  
+  @mixin small-mobile {
+    @media only screen and (max-width: 375.98px) {
+      @content;
+    }
+  }

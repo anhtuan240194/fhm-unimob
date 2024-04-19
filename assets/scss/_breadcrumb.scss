@@ -1,0 +1,48 @@
+@import './variable';
+
+.breadcrumb {
+    padding: 32px 0 38px;
+    margin-bottom: 0;
+
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 5px;
+      position: relative;
+      z-index: 1;
+      padding: 2px 0;
+      overflow: hidden;
+    }
+
+    .breadcrumb-link {
+        color: var(--grey-darker);
+        flex: 0 0 max-content;
+        max-width: max-content;
+        
+        &:last-child {
+          flex: 1;
+          max-width: initial;
+          font-weight: 700;
+          max-width: 50%;
+          
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          white-space: unset;
+        }
+    }
+  }
+
+  @include extra-mobile {
+    .breadcrumb {
+      padding: 15px 0 20px;
+
+      .breadcrumb-link {
+        font-size: 12px;
+      }
+    }
+  }
