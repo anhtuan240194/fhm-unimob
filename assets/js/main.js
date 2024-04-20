@@ -71,25 +71,27 @@
 
   const productImagesThumb = new Swiper('.thumb-images .swiper', {
     direction: 'vertical',
-    slidesPerView: 4,
-    spaceBetween: "15",
+    slidesPerView: 2,
+    spaceBetween: 15,
     speed: 1000,
-    freeMode: true,
+    freeMode: false,
+    loop: true,
+    watchOverflow: true,
     watchSlidesProgress: true,
     breakpoints: {
         200: {
             direction: 'horizontal',
             slidesPerView: 4,
-            spaceBetween: 16,
         },
-        992: {
-            slidesPerView: 4,
-            spaceBetween: "15",
+        396: {
+          direction: 'horizontal',
+          slidesPerView: 5,
+        },
+        578: {
             direction: 'vertical',
         },
     },
     navigation: {
-        nextEl: '.thumb-images .swiper-button-next',
         prevEl: '.thumb-images .swiper-button-prev',
     },
   }) || false;
@@ -154,6 +156,38 @@
     },
   }) || false;
   
+  //Blog related
+  const blogRelated = new Swiper(".blog-related .swiper", {
+    speed: 1000,
+    slidesPerView: 3,
+    spaceBetween: 40,
+    watchOverflow: true,
+    breakpoints: {
+      200: {
+        slidesPerView: 1,
+      },
+      392: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      576: {
+        spaceBetween: 20,
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    },
+    navigation: {
+      nextEl: ".blog-related .swiper-button-next",
+      prevEl: ".blog-related .swiper-button-prev",
+    },
+  }) || false;
 
 
 

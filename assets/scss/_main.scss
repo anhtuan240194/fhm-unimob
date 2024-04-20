@@ -236,35 +236,36 @@ img {
 .pagination {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 
   .pagination-btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    color: #000;
-    background-color: #000;
-    width: 40px;
-    height: 40px;
-    font-weight: 700;
-    border-radius: 50%;
+    gap: 7px;
+    color: #616161;
+    background-color: #FFF3EE;
+    padding: 6px 9px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 3px;
     cursor: pointer;
     transition: all 0.35s ease;
 
     &:hover,
     &.active {
-      background: #000;
+      background: $orange;
       color: #fff;
+      font-weight: 600;
     }
   }
 
   .pagination-next,
   .pagination-prev {
-    background-color: #fff;
-    transition: all 0.35s ease;
+    color: #000;
 
     &:hover {
-      background-color: var(--violet);
+      color: #fff;
 
       svg path {
         fill: #fff;
@@ -489,16 +490,16 @@ img {
 
 .form-row {
   display: flex;
-  row-gap: 22px;
-  column-gap: 28px;
+  row-gap: 20px;
+  column-gap: 18px;
   flex-wrap: wrap;
 }
 
 .form-line {
   position: relative;
 
-  flex: 0 0 calc(50% - 14px);
-  max-width: calc(50% - 14px);
+  flex: 0 0 calc(50% - 9px);
+  max-width: calc(50% - 9px);
 
   label {
     display: block;
@@ -511,18 +512,18 @@ img {
   input,
   textarea,
   select {
-    font-weight: 500;
     width: 100%;
-    border: 1px solid var(--grey-light-ac);
-    border-radius: 12px;
-    padding: 20px 50px 18px 20px;
+    border: 1px solid #EDEDED;
+    border-radius: 3px;
+    padding: 15px 50px 15px 20px;
     color: #000;
     font-size: 14px;
+    font-weight: 400;
     line-height: 1.2em;
 
     &::placeholder {
-      color: var(--neutural);
-      font-weight: 400;
+      color: #383838;
+      font-weight: 300;
       font-size: 14px;
     }
 
@@ -538,15 +539,17 @@ img {
   .input-select {
     label {
       position: absolute;
-      top: 6px;
+      top: 9px;
       left: 20px;
       font-size: 10px;
-      color: #000;
+      font-weight: 300;
+      color: #383838;
       text-transform: initial;
     }
 
     select {
-      background: url('../image/icons/select.svg') no-repeat center right 23px;
+      background: url('../images/icons/select.svg') no-repeat center right 23px;
+      padding: 23px 50px 7px 20px;
 
       option {
         color: #000;
@@ -762,6 +765,10 @@ img {
     padding: 10px 24px;
     letter-spacing: 0.1em;
   }
+
+  .pagination {
+    flex-wrap: wrap;
+  }
 }
 
 @include mobile {
@@ -770,10 +777,7 @@ img {
       flex-direction: column;
       gap: 26px;
     }
-    // .helper {
-    //   flex-direction: column;
-    //   align-items: flex-start;
-    // }
+
   }
 }
 
@@ -788,9 +792,6 @@ img {
   .pagination {
     .pagination-btn {
       font-size: 12px;
-      line-height: 18px;
-      width: 32px;
-      height: 32px;
     }
   }
 }
