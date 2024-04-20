@@ -204,7 +204,9 @@ img {
 }
 
 .block-heading {
+  position: relative;
   margin: 0 auto 50px;
+  z-index: 2;
 
   .sub-title {
     font-size: 12px;
@@ -573,135 +575,59 @@ img {
 
 .page-banner {
   position: relative;
+  padding-bottom: 4px;
+  overflow: hidden;
+  margin-bottom: -40px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
 
   &:before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 120%;
     left: 0;
-    bottom: 0;
-    height: 70px;
+    bottom: -45px;
+    height: 100px;
     background-color: #fff;
+    border-top: 10px solid $darkred;
+    z-index: 2;
+    transform: rotate(-2deg);
+    z-index: 2;
   }
 
-  .page-banner-image {
-    position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 
-    &:before {
-      content: '';
+  .page-banner-icon {
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1326px;
+    height: 106px;
+    border-radius: 20px 20px 0 0;
+    background-color: #fff;
+    z-index: 2;
+
+    .icon {
       position: absolute;
-      left: 0;
+      left: 50%;
       top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #000;
-      opacity: 0.5;
+      transform: translate(-50%, -50%);
     }
   }
-}
 
-.recruit-card {
-  display: grid;
-  gap: 27px 59px;
-  grid-template-columns: repeat(2, 1fr);
-  &-item {
-    display: flex;
-    padding: 25px 50px;
-    background-color: #fff;
-    box-shadow: 0px 0px 30px 0px #e5e2f680;
-    gap: 50px;
-    transition: all 0.35s ease;
-    &:hover {
-      transform: translateY(-10px);
-    }
-    .content {
-      max-width: 327px;
-      width: 100%;
-      .title {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 24.2px;
-      }
-      &-flex {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      p {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 26px;
-      }
-      .address .address-content {
-        line-height: 20px;
-        margin-top: 10px;
-      }
-      .requirement {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 3px;
-        margin-top: 3px;
-        .time {
-          padding-right: 57px;
-        }
-      }
-      .salary {
-        margin-top: 3px;
-      }
-      .helper {
-        font-weight: 600;
-        margin-top: 10px;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        .status {
-          font-size: 14px;
-          line-height: 30px;
-          font-weight: 600;
-          &.active {
-            color: $darkred;
-          }
-        }
-        .read-more {
-          font-size: 12px;
-          line-height: 14.52px;
-          background-color: $orange;
-          padding: 8px 22.39px;
-          color: #fff;
-          text-transform: uppercase;
-          position: relative;
-          isolation: isolate;
-          overflow: hidden;
-          &:hover::before {
-            left: 0;
-            right: auto;
-            width: 100%;
-          }
-          &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: auto;
-            top: 0;
-            height: 100%;
-            width: 0;
-            background-color: #fff;
-            opacity: 0.1;
-            z-index: -1;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-          }
-        }
-      }
-
-      .helper.inactive {
-        .status {
-          color: $text-grey;
-        }
-        .read-more {
-          background-color: $bg-grey;
-        }
-      }
-    }
-  }
 }
 
 //***Responsive***//
@@ -729,6 +655,22 @@ img {
   }
 }
 
+@include large-desktop {
+  .page-banner {
+    .page-banner-icon {
+      width: 1140px;
+    }
+  }
+}
+
+@include desktop {
+  .page-banner {
+    .page-banner-icon {
+      width: 960px;
+    }
+  }
+}
+
 @include tablet {
   .product-item {
     .product-name {
@@ -742,6 +684,23 @@ img {
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
+  }
+
+  .page-banner {
+    margin-bottom: 60px;
+    overflow: visible;
+
+    &:before {
+      transform: rotate(0);
+      bottom: 0;
+      height: 10px;
+      width: 100%;
+    }
+
+    .page-banner-icon {
+      height: 0;
+      width: 100%;
+    }
   }
 
   .recruit-card {
