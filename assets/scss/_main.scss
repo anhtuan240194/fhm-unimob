@@ -1,4 +1,3 @@
-
 //***Base Css***//
 /*Reset CSS*/
 body {
@@ -102,7 +101,7 @@ select {
   }
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   width: 19px;
   height: 19px;
   border-radius: 4px;
@@ -115,8 +114,8 @@ input[type="checkbox"] {
     position: relative;
     &:before {
       position: absolute;
-      content: "";
-      background: url("../image/icons/checked.svg") no-repeat #000;
+      content: '';
+      background: url('../image/icons/checked.svg') no-repeat #000;
       background-position: center center;
       width: 100%;
       height: 100%;
@@ -137,7 +136,7 @@ input[type="checkbox"] {
   justify-content: center;
   align-items: center;
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -161,7 +160,6 @@ input[type="checkbox"] {
     }
   }
 }
-
 
 button {
   background: transparent;
@@ -188,16 +186,17 @@ button {
     background-color: $darkred;
     color: #fff;
 
-    a, span {
+    a,
+    span {
       color: #fff;
     }
   }
 
-  a, span {
+  a,
+  span {
     color: #fff;
   }
 }
-
 
 img {
   max-width: 100%;
@@ -259,7 +258,8 @@ img {
     }
   }
 
-  .pagination-next, .pagination-prev {
+  .pagination-next,
+  .pagination-prev {
     background-color: #fff;
     transition: all 0.35s ease;
 
@@ -270,7 +270,7 @@ img {
         fill: #fff;
       }
     }
-    
+
     svg path {
       transition: all 0.35s ease;
     }
@@ -333,14 +333,13 @@ img {
     font-weight: 300;
     line-height: 1.75em;
     margin-bottom: 20px;
-    
+
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     white-space: unset;
-
   }
 
   .product-actions {
@@ -374,7 +373,6 @@ img {
     }
   }
 }
-
 
 .blog-item {
   border-radius: 10px;
@@ -472,7 +470,7 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0px 0px 12px 0px #D5D5D5;
+  box-shadow: 0px 0px 12px 0px #d5d5d5;
   background: #fff;
   transition: all 0.35s ease;
 
@@ -548,7 +546,7 @@ img {
     }
 
     select {
-      background: url("../image/icons/select.svg") no-repeat center right 23px;
+      background: url('../image/icons/select.svg') no-repeat center right 23px;
 
       option {
         color: #000;
@@ -683,7 +681,8 @@ img {
     }
   }
 
-  .swiper-button-prev, .swiper-button-next {
+  .swiper-button-prev,
+  .swiper-button-next {
     display: none;
   }
 
@@ -702,6 +701,10 @@ img {
       height: 0;
       width: 100%;
     }
+  }
+
+  .recruit-card {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -722,7 +725,7 @@ img {
       }
     }
   }
-  
+
   .pagination-wrap {
     justify-content: center;
 
@@ -759,10 +762,20 @@ img {
     padding: 10px 24px;
     letter-spacing: 0.1em;
   }
-
-
 }
 
+@include mobile {
+  .recruit-card {
+    &-item {
+      flex-direction: column;
+      gap: 26px;
+    }
+    // .helper {
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    // }
+  }
+}
 
 @include small-mobile {
   .form-row {

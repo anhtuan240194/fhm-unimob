@@ -184,10 +184,12 @@ button {
   background-color: #BF1E2E;
   color: #fff;
 }
-.btn-main:hover a, .btn-main:hover span {
+.btn-main:hover a,
+.btn-main:hover span {
   color: #fff;
 }
-.btn-main a, .btn-main span {
+.btn-main a,
+.btn-main span {
   color: #fff;
 }
 
@@ -245,17 +247,21 @@ img {
   background: #000;
   color: #fff;
 }
-.pagination .pagination-next, .pagination .pagination-prev {
+.pagination .pagination-next,
+.pagination .pagination-prev {
   background-color: #fff;
   transition: all 0.35s ease;
 }
-.pagination .pagination-next:hover, .pagination .pagination-prev:hover {
+.pagination .pagination-next:hover,
+.pagination .pagination-prev:hover {
   background-color: var(--violet);
 }
-.pagination .pagination-next:hover svg path, .pagination .pagination-prev:hover svg path {
+.pagination .pagination-next:hover svg path,
+.pagination .pagination-prev:hover svg path {
   fill: #fff;
 }
-.pagination .pagination-next svg path, .pagination .pagination-prev svg path {
+.pagination .pagination-next svg path,
+.pagination .pagination-prev svg path {
   transition: all 0.35s ease;
 }
 
@@ -418,7 +424,7 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0px 0px 12px 0px #D5D5D5;
+  box-shadow: 0px 0px 12px 0px #d5d5d5;
   background: #fff;
   transition: all 0.35s ease;
 }
@@ -595,7 +601,8 @@ img {
     -webkit-line-clamp: 2;
     height: 78px;
   }
-  .swiper-button-prev, .swiper-button-next {
+  .swiper-button-prev,
+  .swiper-button-next {
     display: none;
   }
   .page-banner {
@@ -611,6 +618,9 @@ img {
   .page-banner .page-banner-icon {
     height: 0;
     width: 100%;
+  }
+  .recruit-card {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -649,6 +659,12 @@ img {
     font-size: 12px;
     padding: 10px 24px;
     letter-spacing: 0.1em;
+  }
+}
+@media only screen and (max-width: 480.98px) {
+  .recruit-card-item {
+    flex-direction: column;
+    gap: 26px;
   }
 }
 @media only screen and (max-width: 375.98px) {
@@ -5590,4 +5606,23 @@ footer .copyright {
   .customer-norti-page .norti-item .view-more {
     display: none;
   }
+}
+.position-recruit .recruit-card {
+  margin-top: 13px;
+  margin-bottom: 74px;
+}
+.position-recruit .recruit-card-item {
+  display: none;
+}
+.position-recruit .show-more {
+  margin-bottom: 155px;
+  width: 100%;
+}
+.position-recruit .show-more::after {
+  content: "";
+  background-image: url("../images/icons/arrow-icon.svg");
+  position: relative;
+  z-index: 2;
+  width: 12px;
+  height: 9px;
 }
