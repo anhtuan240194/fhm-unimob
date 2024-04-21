@@ -1,0 +1,29 @@
+.popular-articles {
+  h2.title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.21em;
+    margin-bottom: 27px;
+  }
+  .grid-card {
+    margin-bottom: 63px;
+    border-radius: 15px;
+    border: 1px solid #dbdbdb;
+    overflow: hidden;
+  }
+}
+
+.browse-articles {
+  h2.title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.21em;
+    margin-bottom: 28px;
+  }
+  .grid-card {
+    gap: 26px 25px;
+    .item {
+      border-radius: 25px;
+    }
+  }
+}
