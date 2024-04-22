@@ -19,3 +19,18 @@
     }
   }
 }
+
+@include landscape-phone {
+  .grid-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include mobile {
+  .grid-card {
+    grid-template-columns: repeat(1, 1fr);
+    .item {
+      max-width: 100%;
+    }
+  }
+}

@@ -726,56 +726,32 @@
                     </div>
 
                     <p>Select Job Position*</p>
-
                     <div class="form-line form-line-full">
                       <div class="input-select">
-                        <select name="country" id="seclect-country">
-                          <option value="United Kingdom">
+                        <select name="position" id="seclect-position">
+                          <option value="select" class="item">
                             -Please Select*-
                           </option>
-                          <option value="United Kingdom">United Kingdom</option>
-                          <option value="United States">United States</option>
-                          <option value="Uruguay">Uruguay</option>
-                          <option value="Uzbekistan">Uzbekistan</option>
-                          <option value="Vanuatu">Vanuatu</option>
-                          <option value="Venezuela">Venezuela</option>
-                          <option value="Vietnam">Vietnam</option>
-                          <option value="Yemen">Yemen</option>
-                          <option value="Zambia">Zambia</option>
-                          <option value="Zimbabwe">Zimbabwe</option>
+                          <option value="Frontend" class="item">
+                            Frontend
+                          </option>
+                          <option value="Backend" class="item">Backend</option>
                         </select>
                       </div>
                     </div>
 
                     <p>Upload your Portfolio*</p>
-
                     <div class="form-line form-line-full">
-                      <div class="input-select">
-                        <select name="country" id="seclect-country">
-                          <option value="">-Choose Portfolio-</option>
-                          <option value="Trinidad and Tobago">
-                            Trinidad and Tobago
-                          </option>
-                          <option value="Tunisia">Tunisia</option>
-                          <option value="Turkey">Turkey</option>
-                          <option value="Turkmenistan">Turkmenistan</option>
-                          <option value="Tuvalu">Tuvalu</option>
-                          <option value="Uganda">Uganda</option>
-                          <option value="Ukraine">Ukraine</option>
-                          <option value="United Arab Emirates">
-                            United Arab Emirates
-                          </option>
-                          <option value="United Kingdom">United Kingdom</option>
-                          <option value="United States">United States</option>
-                          <option value="Uruguay">Uruguay</option>
-                          <option value="Uzbekistan">Uzbekistan</option>
-                          <option value="Vanuatu">Vanuatu</option>
-                          <option value="Venezuela">Venezuela</option>
-                          <option value="Vietnam">Vietnam</option>
-                          <option value="Yemen">Yemen</option>
-                          <option value="Zambia">Zambia</option>
-                          <option value="Zimbabwe">Zimbabwe</option>
-                        </select>
+                      <div class="input-select choose-file">
+                        <input
+                          type="file"
+                          class="file"
+                          id="files"
+                          title="test"
+                        />
+                        <label for="files" class="fake-file" id="lable_file"
+                          >-Choose Portfolio-</label
+                        >
                       </div>
                     </div>
 
@@ -1130,6 +1106,13 @@
     </footer>
 
     <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./assets/js/position-recruit.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $('#files').change(function () {
+        $('#lable_file').html(
+          $(this).val().split('\\').splice(-1, 1)[0] || '-Choose Portfolio-'
+        );
+      });
+    </script>
   </body>
 </html>
