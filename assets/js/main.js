@@ -49,7 +49,7 @@
   const homeBlog = new Swiper(".home-blogs .swiper", {
     vertical: 'horizontal',
     slidesPerView: 1,
-    spaceBetween: 40,
+    spaceBetween: 30,
     watchOverflow: true,
     speed: 1200,
     autoplay: true,
@@ -64,14 +64,14 @@
       },
       992: {
         slidesPerView: 3,
-        spaceBetween: 40,
+        spaceBetween: 30,
       },
     },
   }) || false;
 
   const productImagesThumb = new Swiper('.thumb-images .swiper', {
     direction: 'vertical',
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 15,
     speed: 1000,
     freeMode: false,
@@ -110,18 +110,21 @@
 
   //Call Light Gallery Product Detail
   document.addEventListener('DOMContentLoaded', () => {
-    const lightGalleryProject = lightGallery(document.querySelector('.large-images .swiper-wrapper'), {
-      animateThumb: true,
-      allowMediaOverlap: true,
-      toggleThumb: true,
-      download: false,
-      speed: 500,
-      slideShowAutoplay: true,
-      plugins: [lgThumbnail, lgFullscreen],
-      fullScreen: true,
-      showZoomInOutIcons: false,
-      actualSize: true,
-    });
+    const largeImages = document.querySelector('.large-images .swiper-wrapper')
+    if(largeImages){
+      const lightGalleryProject = lightGallery(largeImages, {
+        animateThumb: true,
+        allowMediaOverlap: true,
+        toggleThumb: true,
+        download: false,
+        speed: 500,
+        slideShowAutoplay: true,
+        plugins: [lgThumbnail, lgFullscreen],
+        fullScreen: true,
+        showZoomInOutIcons: false,
+        actualSize: true,
+      });
+    }
   })
 
   //Swiper Related Products
@@ -157,30 +160,22 @@
   }) || false;
   
   //Blog related
-  const blogRelated = new Swiper(".blog-related .swiper", {
+  const relatedBlog = new Swiper(".blog-related .swiper", {
     speed: 1000,
     slidesPerView: 3,
-    spaceBetween: 40,
+    spaceBetween: 30,
     watchOverflow: true,
     breakpoints: {
       200: {
         slidesPerView: 1,
-      },
-      392: {
-        slidesPerView: 2,
-        spaceBetween: 16,
-      },
-      576: {
         spaceBetween: 20,
+      },
+      377: {
         slidesPerView: 2,
       },
       992: {
         slidesPerView: 3,
-        spaceBetween: 25,
-      },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 40,
+        spaceBetween: 30,
       },
     },
     navigation: {
@@ -188,6 +183,3 @@
       prevEl: ".blog-related .swiper-button-prev",
     },
   }) || false;
-
-
-
