@@ -71,10 +71,40 @@
           width: 100%;
           margin-top: 20px;
         }
-        select {
+        select,
+        .fake-file {
           padding: 15px 20px;
           background: url('../images/icons/select-arrow.svg') no-repeat center
             right 23px;
+          option {
+            &:first-child {
+              display: none;
+            }
+          }
+        }
+        .choose-file {
+          position: relative;
+          .fake-file {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            border: 1px solid #ededed;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.2em;
+            color: #000;
+          }
+          .file {
+            position: relative;
+            text-align: right;
+            -moz-opacity: 0;
+            opacity: 0;
+            z-index: 2;
+          }
         }
       }
       .form-required {

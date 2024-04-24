@@ -1,0 +1,36 @@
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  .item {
+    max-width: 393px;
+    border: 1px solid #dbdbdb;
+    padding: 36px 60px 34px 39px;
+    .title {
+      font-size: 12px;
+      line-height: 1.21em;
+      font-weight: 500;
+      color: #757575;
+    }
+    .link {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5em;
+    }
+  }
+}
+
+@include landscape-phone {
+  .grid-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include mobile {
+  .grid-card {
+    grid-template-columns: repeat(1, 1fr);
+    .item {
+      max-width: 100%;
+    }
+  }
+}
