@@ -71,7 +71,7 @@
 
   const productImagesThumb = new Swiper('.thumb-images .swiper', {
     direction: 'vertical',
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 15,
     speed: 1000,
     freeMode: false,
@@ -183,6 +183,3 @@
       prevEl: ".blog-related .swiper-button-prev",
     },
   }) || false;
-
-
-
