@@ -1,0 +1,235 @@
+.joining-unimob {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 196px;
+
+    .block-heading {
+        margin-bottom: 188px;
+
+        p {
+            max-width: 927px;
+            margin: 0 auto;
+        }
+    }
+
+    .joining-content {
+        position: relative;
+        width: 60%;
+        max-width: 607px;
+
+        .title {
+            font-size: 30px;
+            line-height: 1.5em;
+            margin-bottom: 13px;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.75em;
+            margin-bottom: 22px;
+        }
+    }
+
+    .banner {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-width: 43.375%;
+    }
+}
+
+.hiring-process {
+    padding: 100px 0;
+    background-color: #F9F9F9;
+    overflow: hidden;
+    margin-bottom: 90px;
+
+    .block-heading {
+        p {
+            max-width: 773px;
+            margin: 0 auto;
+        }
+    }
+
+
+    .hiring-process-list {
+        display: flex;
+        gap: 34px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0 calc(50vw - 580px);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .hiring-process-item {
+        flex: 0 0 41.12%;
+        max-width: 41.12%;
+
+        .hiring-process-image {
+            aspect-ratio: 477/324;
+            margin-bottom: 33px;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .hiring-process-title {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 8px;
+
+            .number {
+                display: inline-block;
+                border-radius: 50%;
+                flex: 0 0 29px;
+                width: 29px;
+                height: 29px;
+                background-color: #000;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                line-height: 31px;
+            }
+
+            h5 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+        }
+
+        .hiring-process-content {
+            font-size: 1rem;
+            padding-left: 38px;
+            font-weight: 300;
+            line-height: 1.75em;
+        }
+    }
+}
+
+.composition {
+    margin-bottom: 133px;
+
+    .block-heading {
+        p {
+            max-width: 773px;
+            margin: 0 auto;
+        }
+    }
+
+    .composition-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 29px;
+    }
+
+    .composition-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 103px;
+        width: 103px;
+        padding: 5px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: $orange;
+        aspect-ratio: 1;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 1.5em;
+    }
+}
+
+@include large-desktop {
+    .joining-unimob {
+        padding-bottom: 120px;
+
+        .block-heading {
+            margin-bottom: 100px;
+        }
+    } 
+
+    .hiring-process {
+        .hiring-process-list {
+            padding: 0 calc(50vw - 560px);
+        }
+    }
+}
+
+@include desktop {
+    .hiring-process {
+        .hiring-process-list {
+            padding: 0 calc(50vw - 470px);
+        }
+
+        .hiring-process-item {
+            flex: 0 0 calc(50% - 17px);
+            max-width: calc(50% - 17px);
+        }
+    }
+}
+
+@include tablet {
+    .joining-unimob {
+        padding-bottom: 60px;
+
+        .block-heading {
+            margin-bottom: 50px;
+        }
+
+        .banner {
+            display: none;
+        }
+
+        .joining-content {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    .hiring-process {
+        .hiring-process-list {
+            padding: 0 calc(50vw - 350px);
+        }
+    }
+}
+
+@include landscape-phone {
+    .hiring-process {
+        margin-bottom: 60px;
+
+        .hiring-process-list {
+            padding: 0 calc(50vw - 260px);
+        }
+
+        .hiring-process-item {
+            flex: 0 0 calc(75% - 17px);
+            max-width: calc(75% - 17px);
+        }
+    }  
+}
+
+@include extra-mobile {
+    .hiring-process {
+        .hiring-process-list {
+            padding: 0 10px;
+        }
+
+        .hiring-process-item {
+            flex: 0 0 calc(90% - 17px);
+            max-width: calc(90% - 17px);
+        }
+    }     
+}

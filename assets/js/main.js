@@ -10,7 +10,6 @@
 
       const currentScroll = Math.round( window.scrollY)
       const changeScroll =  (currentScroll - aboutHomeScrollTop + 300)/widthContainer*100
-      console.log(changeScroll)
       if(changeScroll > 100) {
         unimob.style.right = '100%'
         game.style.left = '100%'
@@ -183,3 +182,31 @@
       prevEl: ".blog-related .swiper-button-prev",
     },
   }) || false;
+
+  //Call Light Gallery Our Office
+  document.addEventListener('DOMContentLoaded', () => {
+    const ourOfficeImgs = document.querySelector('.our-office .our-office-images')
+    if(ourOfficeImgs){
+      const lightGalleryProject = lightGallery(ourOfficeImgs, {
+        animateThumb: true,
+        allowMediaOverlap: true,
+        toggleThumb: true,
+        download: false,
+        speed: 500,
+        slideShowAutoplay: true,
+        plugins: [lgThumbnail, lgFullscreen],
+        fullScreen: true,
+        showZoomInOutIcons: false,
+        actualSize: true,
+      });
+    }
+  })
+
+  //Event swap text input type file
+  const inputTypeFile = document.querySelector('input[type="file"]');
+  if(inputTypeFile){
+    const text = inputTypeFile.nextElementSibling
+    inputTypeFile.addEventListener('change', () => {
+      text.textContent = inputTypeFile.value.split('\\').pop() || '-Choose Portfolio-';
+    })
+  }

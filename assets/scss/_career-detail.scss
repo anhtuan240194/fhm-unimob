@@ -1,0 +1,246 @@
+.position-recruit-detail {
+  margin-bottom: 85px;
+
+  .block-heading {
+    p {
+      max-width: 927px;
+      margin: 0 auto;
+    }
+  }
+
+  .detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 60px;
+    justify-content: space-between;
+    padding: 15px 21px 15px 21px;
+    border-radius: 10px;
+    border: 1px solid #d3d3d3;
+    &-item {
+      h4 {
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.625em;
+      }
+      &-content {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.4em;
+      }
+    }
+  }
+
+  .detail-content {
+    margin: 53px 14% 0 20%;
+    
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2em;
+      margin-bottom: 26px;
+      margin-top: 15px;
+    }
+    ul,
+    li {
+      list-style-type: disc;
+      color: #481800;
+    }
+
+    ul {
+      margin-left: 27px;
+      display: inline-block;
+      max-width: 729px;
+    }
+    li {
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.7em;
+      .sub {
+        color: #0055a7;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.recruitment-form {
+  padding: 110px 0 120px;
+  background-color: #F9F9F9;
+  overflow: hidden;
+  margin-bottom: 107px;
+
+  .recruitment-form-wrap {
+    position: relative;
+  }
+
+  .recruiment-form-image {
+    width: 50%;
+
+    .content {
+      .title {
+        font-size: 26px;
+        line-height: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.75em;
+      }
+    }
+
+    .banner {
+      margin-top: 48px;
+    }
+  }
+
+  .form {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 54%;
+    transform: translateX(22.5%);
+
+    @media(max-width:1500px){
+      transform: translateX(0);
+      width: 45%;
+    }
+
+    .form-required {
+      text-align: right;
+      font-size: 12px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 2em;
+      margin-bottom: 18px;
+    }
+
+    .label {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.75em;
+      margin-bottom: 15px;
+    }
+
+    .form-row {
+      margin-bottom: 20px;
+    }
+
+    .form-line {
+      input, textarea {
+        background-color: #fff;
+        color: #000;
+
+        &::placeholder {
+          color: #000;
+        }
+      }
+
+      .input-select {
+        select {
+          background: url('../images/icons/select.svg') no-repeat #fff center right 23px;
+          padding: 15px 50px 15px 20px;
+        }
+      }
+
+      .choose-file {
+        position: relative;
+        
+        label {
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          transform: translateY(-50%);
+          font-size: 14px;
+        }
+
+        input{
+          color: transparent;
+
+          &::-webkit-file-upload-button {
+            visibility: hidden;
+          }
+        }
+      }
+    }
+
+    .submit {
+      width: 100%;
+    }
+  }
+}
+
+.related-job {
+  h2.title {
+    margin-bottom: 60px;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1.21em;
+  }
+  .recruit-card {
+    margin-bottom: 136px;
+  }
+}
+
+@include small-desktop {
+  .position-recruit-detail {
+    .detail {
+      .detail-item {
+        flex: 0 0 calc(45% - 23px);
+      }
+    }
+
+    .detail-content {
+      margin: 53px 0 0;
+    }
+  }
+}
+
+@include tablet {
+  .recruitment-form {
+    .recruiment-form-image {
+      width: 100%;
+
+      .banner img {
+        width: 100%;
+      }
+    }
+
+    .form {
+      width: 100%;
+      position: relative;
+      margin-top: 40px;
+    }
+  }
+}
+
+@include landscape-phone {
+  .position-recruit-detail {
+    margin-bottom: 60px;
+  }
+
+  .recruitment-form {
+    padding: 60px 0;
+    margin-bottom: 60px;
+  }
+
+  .related-job {
+    .recruit-card {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@include mobile {
+  .position-recruit-detail {
+    .detail {
+      .detail-item {
+        flex: 0 0 100%;
+      }
+    }
+  }
+}
+
