@@ -183,8 +183,8 @@
         left: 4%;
         top: 0;
         background-color: $darkred;
-        clip-path: polygon(0 0, 4% 100%, 100% 0);
-        -webkit-clip-path: polygon(0 0, 4% 100%, 100% 0);
+        clip-path: polygon(0 0, 4% 100%, 95% 0);
+        -webkit-clip-path: polygon(0 0, 4% 100%, 95% 0);
     }
 
     .clipath-orange {
@@ -194,8 +194,8 @@
         width: 42%;
         height: 24px;
         background-color: $orange;
-        clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
-        -webkit-clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+        clip-path: polygon(3% 0%, 100% 100%, 100% 0%);
+        -webkit-clip-path: polygon(3% 0%, 100% 100%, 100% 0%);
     }
 
     .block-heading {
@@ -384,6 +384,12 @@
             display: none;
         }
     }
+
+    .download-apps {
+        .block-heading {
+            margin: 0 auto;
+        }
+    }
 }
 
 @include tablet {
@@ -430,6 +436,8 @@
     }
 
     .download-apps {
+        padding: 60px 0;
+        
         .block-heading {
             width: 100%;
             text-align: center;

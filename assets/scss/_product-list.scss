@@ -1,4 +1,6 @@
 .products {
+    margin-bottom: 187px;
+
     .block-heading {
         p {
             max-width: 927px;
@@ -19,42 +21,12 @@
             width: 100%;
         }
     }
-
-    .products-description {
-        margin: 56px 0 106px;
-        
-        h2 {
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 2em;
-            margin-bottom: 11px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.875em;
-            letter-spacing: 0.02em;
-            margin-bottom: 38px;
-        }
-
-        ul {
-            margin-bottom: 26px;
-        }
-
-        li {
-            font-size: 18px;
-            line-height: 1.2em;
-            background: url('../images/icons/check.svg') no-repeat;
-            background-size: 16px 16px;
-            background-position: left top 2px;
-            margin-bottom: 20px;
-            padding-left: 27px;
-        }
-    }
 }
 
 @include tablet {
     .products {
+        margin-bottom: 60px;
+
         .list-product {
             gap: 60px 30px;
         }
@@ -69,18 +41,6 @@
 
         .view-more {
             margin-top: 40px;
-        }
-
-        .products-description {
-            h2 {
-                font-size: 20px;
-                line-height: 1.5em;
-            }
-
-            p, li {
-                font-size: 1rem;
-                line-height: 1.5em;
-            }
         }
     }
 }

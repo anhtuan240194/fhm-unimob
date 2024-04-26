@@ -499,7 +499,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   height: 100%;
 }
 .lg-outer .lg-item:not(.lg-start-end-progress) {
-  background: url("../image/icons/loading.gif") no-repeat scroll center center transparent;
+  background: url("../images/loading.gif") no-repeat scroll center center transparent;
 }
 .lg-outer .lg-item:before {
   content: "";

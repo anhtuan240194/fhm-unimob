@@ -1,7 +1,6 @@
 @import './variable';
 @import './main.scss';
 @import './header';
-@import './popup-all';
 @import './footer';
 @import './index';
 @import './breadcrumb';
@@ -12,13 +11,9 @@
 @import './product-detail';
 @import './promotion';
 @import './contact';
-@import './cart';
-@import './checkout';
-@import './customer';
-@import './position-recruit';
-@import './recruit-card';
-@import './position-recruit-detail';
-@import './grid-card';
-@import './support'; // @import "./404";
-@import './position-recruit-detail'; // @import "./404";
-@import './why-choose'
+@import './careers';
+@import './career-detail';
+@import './support'; 
+@import './why-choose';
+@import './our-office';
+@import './joining-unimob';

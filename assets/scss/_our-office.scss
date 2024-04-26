@@ -1,0 +1,102 @@
+.our-office {
+    margin-bottom: 144px;
+
+    .block-heading {
+        p {
+            max-width: 966px;
+            margin: 0 auto 13px;
+        }
+    }
+
+    .our-office-images {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 19px;
+    }
+
+    .image {
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.banner-large {
+    img {
+        width: 100%;
+    }
+}
+
+.mission-vision {
+    &.module-our-office {
+        margin-top: -110px;
+
+        .block-heading {
+            padding-top: 75px;
+            border-radius: 20px;
+            background-color: #fff;
+            margin-bottom: 85px;
+
+            p {
+                max-width: 966px;
+                font-size: 20px;
+            }
+        }
+
+        .mission-vision-item {
+            gap: 60px 10.9%;
+        }
+    }
+}
+
+@include min-desktop {
+    .mission-vision {
+        &.module-our-office {
+            .mission-vision-item {
+                margin-bottom: 150px;
+    
+                .content {
+                    h3 {
+                        font-size: 1.75rem;
+                    }
+    
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include landscape-phone {
+    .our-office {
+        .our-office-images {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .mission-vision {
+        &.module-our-office {
+            margin-top: -40px;
+
+            .block-heading {
+                padding-top: 50px;
+                margin: 0 auto 50px;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@include small-mobile {
+    .our-office {
+        .our-office-images {
+            grid-template-columns: 1fr;
+        }
+    }
+}

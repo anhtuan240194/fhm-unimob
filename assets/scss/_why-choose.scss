@@ -1,101 +1,143 @@
-.mission-vision {
-    .mission-vision-item {
+.believe {
+    padding: 95px 0 168px;
+    background-color: #F9F9F9;
+    margin-bottom: 95px;
+
+    .block-heading {
+        p {
+            max-width: 780px;
+            margin: 0 auto 15px;
+        }
+    }
+
+    .believe-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 27px;
+    }
+
+    .believe-item {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 52px 15px 40px;
+        text-align: center;
+        box-shadow: 0 0 30px 0 rgba(#E5E2F6, 0.5);
+        transition: all 0.35s ease;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 0 30px 0 rgba(#000, 0.1);
+        }
+
+        .believe-icon {
+            height: 84px;
+            margin-bottom: 35px;
+        }
+
+        .believe-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.625em;
+            
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            white-space: unset;
+        
+        }
+    }
+}
+
+.our-journey {
+    margin-bottom: 129px;
+
+    .our-journey-content {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        gap: 12.9%;
-        margin-bottom: 175px;
+        gap: 20px 10%;
+        margin-bottom: 73px;
 
-        &.vision {
-            flex-direction: row-reverse;
-
-            .image {
-                &:before {
-                    left: 30%;
-                    bottom: -40px;
-                    width: 23px;
-                    height: 23px;
-                    border-radius: 50%;
-                    background-color: $orange;
-                   
-                }
-
-                &:after {
-                    background-color: $orange;
-                    left: 0;
-                    bottom: 0 ;
-                    width: 130px;
-                    height: 130px;
-                    border-radius: 50%;
-                    transform: translate(-20%, 50%);
-                }
-            }
-        }
-
-        &.mission {
-            .image {
-                &:before {
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: #F9E1D6;
-                    border-radius: 20px;
-                    transform: translateX(20px) rotate(-4deg);
-                }
-
-                &:after {
-                    background-color: $darkred;
-                    right: 58px;
-                    bottom: 0 ;
-                    width: 93px;
-                    height: 93px;
-                    border-radius: 50%;
-                    transform: translateY(50%);
-                }
-            }
-        }
-
-
-        .image {
-            position: relative;
-            flex: 0 0 45%;
-            max-width: 520px;
-
-            &:before {
-                content: '';
-                position: absolute;
+        p {
+            font-size: 1rem;
+            line-height: 1.75em;
+            font-weight: 300;
+            flex: 1;
+            
+            &:first-child {
+                max-width: 507px;
+                padding-left: 4.5%;
             }
 
-            &:after {
-                content: '';
-                position: absolute;
-                z-index: 2;
-            }
-
-            img {
-                position: relative;
-            }
-        }
-
-        .content {
-            h3 {
-                font-size: 28px;
-                font-weight: 700;
-                line-height: 1.5em;
-                margin-bottom: 10px;
-            }
-
-            p {
-                font-size: 18px;
-                font-weight: 300;
-                line-height: 1.67em;
+            &:nth-child(2) {
+                max-width: 535px;
             }
         }
     }
 
-    .mission-vision-content {
-        max-width: 966px;
-        margin: 0 auto;
+    .our-jouney-imaage {
+        img {
+            border-radius: 6px;
+        }
+    }
+}
+
+@include min-desktop {
+    .our-journey {
+        .block-heading {
+            .title {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .believe {
+        margin-bottom: 60px;
+        padding-bottom: 100px;
+
+        .believe-list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .our-journey {
+        margin-bottom: 60px;
+
+        .our-journey-content {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@include landscape-phone {
+    .believe {
+        padding: 60px 0;
+    }
+}
+
+@include extra-mobile {
+    .our-journey {
+        .our-journey-content {
+            flex-wrap: wrap;
+
+            p {
+                flex: 0 0 100%;
+                max-width: 100%;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
     }
 }

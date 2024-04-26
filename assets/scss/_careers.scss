@@ -2,25 +2,32 @@
   display: grid;
   gap: 27px 59px;
   grid-template-columns: repeat(2, 1fr);
-  &-item {
+  .recruit-card-item {
     display: flex;
+    align-items: flex-start;
     padding: 25px 50px;
     background-color: #fff;
     box-shadow: 0px 0px 30px 0px #e5e2f680;
-    gap: 50px;
+    gap: 9%;
     transition: all 0.35s ease;
     &:hover {
       transform: translateY(-10px);
     }
+
+    .icon {
+      flex: 0 0 72px;
+      max-width: 72px;
+    }
+
     .content {
-      max-width: 327px;
-      width: 100%;
+      flex: 1;
+      
       .title {
         font-size: 20px;
         font-weight: 600;
         line-height: 24.2px;
       }
-      &-flex {
+      .content-flex {
         display: flex;
         align-items: center;
         gap: 10px;
@@ -62,31 +69,11 @@
         .read-more {
           font-size: 12px;
           line-height: 14.52px;
-          background-color: $orange;
           padding: 8px 22.39px;
           color: #fff;
           text-transform: uppercase;
-          position: relative;
-          isolation: isolate;
           overflow: hidden;
-          &:hover::before {
-            left: 0;
-            right: auto;
-            width: 100%;
-          }
-          &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: auto;
-            top: 0;
-            height: 100%;
-            width: 0;
-            background-color: #fff;
-            opacity: 0.1;
-            z-index: -1;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-          }
+
         }
       }
 
@@ -96,8 +83,35 @@
         }
         .read-more {
           background-color: $bg-grey;
+          pointer-events: none;
         }
       }
+    }
+  }
+}
+
+.position-recruit {
+  .block-heading {
+    p {
+      max-width: 927px;
+      margin: 0 auto;
+    }
+  }
+  .recruit-card {
+    margin-top: 13px;
+    margin-bottom: 74px;
+  }
+  
+  .show-more {
+    margin-bottom: 155px;
+    width: 100%;
+    &::after {
+      content: '';
+      background-image: url('../images/icons/arrow-icon.svg');
+      position: relative;
+      z-index: 2;
+      width: 12px;
+      height: 9px;
     }
   }
 }
@@ -110,7 +124,7 @@
 
 @include mobile {
   .recruit-card {
-    &-item {
+    .recruit-card-item {
       flex-direction: column;
       gap: 26px;
     }
